@@ -6,7 +6,7 @@
 
 ## 📦 About This App
 
-A React web app for browsing and downloading custom track ZIPs for **AI Learns To Drive**, a simulation game where you evolve neural-network drivers via evolutionary algorithms. Features include:
+A React web app for browsing and downloading custom track ZIPs for **AI Learns To Drive**, a simulation game where you evolve neural-network drivers via evolutionary algorithms. Future features include:
 
 - **Track List**: Card grid displaying each track’s image, name, surface (Asphalt, Dirt, Ice), length, and author.  
 - **Search & Filters**: Live search by track name or author, plus modal filters for surface, length range, and multiple tags (e.g. “180 curves”, “GP tracks”) .  
