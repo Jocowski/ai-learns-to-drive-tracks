@@ -160,5 +160,536 @@
         "tags": [],
         "length": 42,
         "authors": ["Gaborlink"]
+    },
+    {
+        "id": "00019",
+        "name": "Monster",
+        "description": "",
+        "surface": ["Asphalt", "Dirt", "Ice"],
+        "tags": [],
+        "length": 76,
+        "authors": ["ActivationFunction"]
+    },
+    {
+        "id": "00020",
+        "name": "Monza",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 22,
+        "authors": ["Ceenie"]
+    },
+    {
+        "id": "00021",
+        "name": "Albert Park, Melbourne",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier"]
+    },
+    {
+        "id": "00022",
+        "name": "USA Vegas",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00023",
+        "name": "USA Vegas 2",
+        "description": "USA Vegas but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00024",
+        "name": "Singapore",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 36,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00025",
+        "name": "Silverstone (UK)",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00026",
+        "name": "Silverstone",
+        "description": "Silverstone (UK) but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00027",
+        "name": "Qatar",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00028",
+        "name": "Qatar 2",
+        "description": "Qatar but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00029",
+        "name": "Monza",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 18,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00030",
+        "name": "Monza 2",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 24,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00031",
+        "name": "Monaco",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 30,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00032",
+        "name": "Monaco 2",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 30,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00033",
+        "name": "Miami",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 38,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00034",
+        "name": "Miami 2",
+        "description": "Miami but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 38,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00035",
+        "name": "Mexico",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 24,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00036",
+        "name": "Jeddah",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00037",
+        "name": "Jeddah 2",
+        "description": "Jeddah but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00038",
+        "name": "USA Austin",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 38,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00039",
+        "name": "USA Austin 2",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 36,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00040",
+        "name": "Spain",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00041",
+        "name": "Brazil",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00042",
+        "name": "Brazil 2",
+        "description": "Brazil but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00043",
+        "name": "Baku",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00044",
+        "name": "Baku 2",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00045",
+        "name": "Bahrain",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 40,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00046",
+        "name": "Austria",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 26,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00047",
+        "name": "Austria 2",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 22,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00048",
+        "name": "Abu Dhabi",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00049",
+        "name": "Imola",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 26,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00050",
+        "name": "Imola (NEW)",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 26,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00051",
+        "name": "Imola Old",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00052",
+        "name": "Hungary",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00053",
+        "name": "Hungary 2",
+        "description": "Hungary but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00054",
+        "name": "China",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00055",
+        "name": "China 2",
+        "description": "China but with a different start line.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00056",
+        "name": "Canada",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 26,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00057",  
+        "name": "Hockenheim",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00058",
+        "name": "Melbourne",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 20,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00059",
+        "name": "Netherlands",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00060",
+        "name": "Spa",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["Fluffier", "301rng", "ActivationFunction"]
+    },
+    {
+        "id": "00061",
+        "name": "10 Sharp Tri-Terrain",
+        "description": "",
+        "surface": ["Asphalt", "Dirt", "Ice"],
+        "tags": [],
+        "length": 34,
+        "authors": ["The Demon Within"]
+    },
+    {
+        "id": "00062",
+        "name": "Mount Panorama (Bathurst)",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["Fluffier"]
+    },
+    {
+        "id": "00063",
+        "name": "AI trainer track",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 68,  
+        "authors": ["unlucky_tea_drinker"]
+    },
+    {
+        "id": "00064",
+        "name": "BiggiOne",
+        "description": "",
+        "surface": ["Asphalt", "Dirt", "Ice"],
+        "tags": [],
+        "length": 74,
+        "authors": ["PcbZorg"]
+    },
+    {
+        "id": "00065",
+        "name": "Australian GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 36,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00066",
+        "name": "Austrian GP",  
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Arsenio"]
+    },  
+    {
+        "id": "00067",
+        "name": "Bahrain GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 58,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00068",
+        "name": "Chinese GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 48,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00069",
+        "name": "Hungarian GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 42,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00070",
+        "name": "Italy Imola GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 32,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00071",
+        "name": "Monaco GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 44,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00072",
+        "name": "Nascar",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 24,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00073",
+        "name": "Qatar GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 58,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00074",
+        "name": "Spain GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 46,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00075",
+        "name": "USA Miami GP",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 50,
+        "authors": ["Arsenio"]
+    },
+    {
+        "id": "00076",
+        "name": "Ice Edurance",
+        "description": "",
+        "surface": ["Ice"],
+        "tags": [],
+        "length": 76,
+        "authors": ["301rng"]
+    },
+    {
+        "id": "00077",
+        "name": "Drift INITIAL D & MF GHOST",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 62,
+        "authors": ["「Hiro • KilluJr」"]
     }
 ]
