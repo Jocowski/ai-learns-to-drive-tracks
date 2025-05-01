@@ -11,7 +11,7 @@ const { Header, Content } = Layout;
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/ai-learns-to-drive-tracks">
       <Layout className="layout">
         <Header>
           <Link to="https://store.steampowered.com/app/3312030/AI_Learns_To_Drive/" target="_blank">
