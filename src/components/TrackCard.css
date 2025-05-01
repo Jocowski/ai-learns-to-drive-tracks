@@ -52,11 +52,15 @@
   gap: 8px;
   margin-bottom: 8px;
   color: var(--text-white);
+  flex-wrap: wrap;
 }
 
 .track-card-info-label {
   color: rgba(255, 255, 255, 0.65);
   font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 600;
 }
 
 .track-card-download-link {
@@ -94,4 +98,11 @@
 .preview-button:hover {
   background: rgba(0, 0, 0, 0.7);
   transform: scale(1.1);
+}
+
+/* Add new styles for author text */
+.track-card-author-text {
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
 } 

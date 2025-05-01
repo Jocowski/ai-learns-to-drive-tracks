@@ -84,7 +84,7 @@ const TrackCard: React.FC<TrackCardProps> = ({ track, onClick }) => {
           </div>
           <div className="track-card-info-row">
             <Text className="track-card-info-label">Author:</Text>
-            <Text>{track.authors.join(', ')}</Text>
+            <Text className="track-card-author-text">{track.authors.join(', ')}</Text>
           </div>
         </div>
       </Card>
