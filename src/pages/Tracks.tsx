@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Typography, Row, Col, Space, Divider, Input, Button, Select, Slider, Dropdown } from 'antd';
-import { RightOutlined, FilterOutlined } from '@ant-design/icons';
+import { FilterOutlined } from '@ant-design/icons';
 import tracksData from '../data/tracks.json';
 import TrackCard from '../components/TrackCard';
 import TrackModal from '../components/TrackModal';

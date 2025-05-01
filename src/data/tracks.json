@@ -691,5 +691,95 @@
         "tags": [],
         "length": 62,
         "authors": ["「Hiro • KilluJr」"]
+    },
+    {
+        "id": "00078",
+        "name": "Monster (Asphalt Version)",
+        "description": "A Asphalt version of the Monster track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 76,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00079",
+        "name": "Ice Edurance (Asphalt Version)",
+        "description": "A Asphalt version of the Ice Edurance track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 76,
+        "authors": ["unlucky_tea_drinker", "301rng"]
+    },
+    {
+        "id": "00080",
+        "name": "A04 Dirt (Asphalt Version)",
+        "description": "A Asphalt version of the A04 Dirt track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 12,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00081",
+        "name": "A05 Two terrains (Asphalt Version)",
+        "description": "A Asphalt version of the A05 Two terrains track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 16,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00082",
+        "name": "A07 Three terrains (Asphalt Version)",
+        "description": "A Asphalt version of the A07 Three terrains track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 12,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00083",
+        "name": "B03 Slalom (Asphalt Version)",
+        "description": "A Asphalt version of the B03 Slalom track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 14,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00084",
+        "name": "B04 Rally (Asphalt Version)",
+        "description": "A Asphalt version of the B04 Rally track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 20,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00085",
+        "name": "B06 Hard (Asphalt Version)",
+        "description": "A Asphalt version of the B06 Hard track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 30,
+        "authors": ["unlucky_tea_drinker", "ActivationFunction"]
+    },
+    {
+        "id": "00086",
+        "name": "10 Sharp Tri-Terrain (Asphalt Version)",
+        "description": "A Asphalt version of the 10 Sharp Tri-Terrain track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 34,
+        "authors": ["unlucky_tea_drinker", "The Demon Within"]
+    },
+    {
+        "id": "00087",
+        "name": "BiggiOne (Asphalt Version)",
+        "description": "A Asphalt version of the BiggiOne track.",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 74,
+        "authors": ["unlucky_tea_drinker", "PcbZorg"]
     }
 ]
