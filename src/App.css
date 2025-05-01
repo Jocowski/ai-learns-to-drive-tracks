@@ -5,6 +5,7 @@
   --accent-color: #2d3f4f;
   --default-link: #D3D3D3;
   --bg-track: #7F92A2;
+  --link-blue: #0056b3;
 }
 
 .App {
@@ -133,4 +134,24 @@ a {
 a:hover {
   color: var(--text-white) !important;
   text-decoration: none;
+}
+
+/* Alert styles */
+.custom-alert {
+  margin: 16px auto;
+  max-width: 800px;
+  font-size: 14px;
+}
+
+.custom-alert p {
+  margin-bottom: 0;
+}
+
+.custom-alert a {
+  color: var(--link-blue) !important;
+}
+
+.custom-alert a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
