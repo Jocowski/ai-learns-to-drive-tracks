@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Typography, Row, Col, Space, Divider, Input, Button, Modal, Select, Slider, Dropdown } from 'antd';
+import { Typography, Row, Col, Space, Divider, Input, Button, Select, Slider, Dropdown } from 'antd';
 import { RightOutlined, FilterOutlined } from '@ant-design/icons';
 import tracksData from '../data/tracks.json';
 import TrackCard from '../components/TrackCard';
@@ -64,7 +64,7 @@ const Tracks: React.FC = () => {
       track.authors.some(author => author.toLowerCase().includes(searchLower));
 
     const matchesSurface = filters.surface.length === 0 || 
-      filters.surface.some(surface => track.surface.includes(surface));
+      filters.surface.every(surface => track.surface.includes(surface));
 
     const matchesLength = track.length >= filters.lengthRange[0] && 
       track.length <= filters.lengthRange[1];
@@ -82,12 +82,6 @@ const Tracks: React.FC = () => {
   // Calculate min and max length for the slider
   const minLength = Math.min(...tracks.map(track => track.length));
   const maxLength = Math.max(...tracks.map(track => track.length));
-
-  const handleMenuClick = (e: any) => {
-    if (e.key === 'reset') {
-      handleResetFilters();
-    }
-  };
 
   const filterMenu = (
     <div className="filter-menu-content" style={{ width: 300, padding: '16px' }}>
