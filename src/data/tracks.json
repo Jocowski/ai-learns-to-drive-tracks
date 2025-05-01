@@ -1,0 +1,11 @@
+[
+    {
+        "id": "00001",
+        "name": "A01 Begginer",
+        "description": "The first track of the base game.",
+        "surface": ["Asphalt"],
+        "tags": ["Base Game"],
+        "length": 8,
+        "authors": ["ActivationFunction"]
+    }
+]

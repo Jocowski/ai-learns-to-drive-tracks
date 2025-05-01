@@ -1,0 +1,70 @@
+.track-card-container {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--element-blue-gray);
+  width: 100%;
+  min-width: 300px;
+}
+
+.track-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.track-card-image-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: var(--bg-blue-gray);
+}
+
+.track-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.track-card-container:hover .track-card-image {
+  transform: scale(1.05);
+}
+
+.track-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.track-card-info {
+  padding: 16px;
+}
+
+.track-card-info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--text-white);
+}
+
+.track-card-info-label {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+.track-card-download-link {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.track-card-download-link:hover {
+  color: rgba(0, 0, 0, 0.65) !important;
+} 

@@ -1,0 +1,25 @@
+.packs-container {
+  padding: 24px;
+}
+
+.dev-warning {
+  background-color: #2d3f4f;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.description {
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.pack-examples {
+  color: #ffffff;
+  margin-left: 24px;
+}
+
+.pack-examples li {
+  margin-bottom: 8px;
+} 

@@ -1,0 +1,134 @@
+:root {
+  --bg-blue-gray: #7c8c9c;
+  --element-blue-gray: #4a5b6c;
+  --text-white: #ffffff;
+  --accent-color: #2d3f4f;
+  --default-link: #D3D3D3;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--bg-blue-gray);
+  min-height: 100vh;
+  color: var(--text-white);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.layout {
+  min-height: 100vh;
+  background-color: var(--bg-blue-gray);
+}
+
+.logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin: 12px 24px 12px 0;
+  background: url('./assets/logo_name.png') no-repeat center center;
+  background-size: contain;
+}
+
+.ant-layout-header {
+  background: var(--element-blue-gray) !important;
+  border-bottom: none;
+}
+
+.ant-menu {
+  background: var(--element-blue-gray) !important;
+}
+
+.ant-menu-item-selected {
+  background-color: var(--accent-color) !important;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: var(--element-blue-gray);
+  margin-top: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-white);
+  min-width: 1052px;
+}
+
+.ant-menu-item {
+  color: var(--default-link) !important;
+  background: var(--element-blue-gray);
+  border-radius: 8px;
+  margin: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.ant-menu-item:hover {
+  color: var(--text-white) !important;
+}
+
+.ant-menu-item a {
+  color: inherit;
+}
+
+.ant-menu-item a:hover {
+  color: inherit;
+}
+
+.ant-typography {
+  color: var(--text-white) !important;
+}
+
+/* Add styles for buttons */
+button, 
+.ant-btn {
+  color: var(--default-link) !important;
+  transition: color 0.3s ease;
+}
+
+button:hover,
+.ant-btn:hover {
+  color: var(--text-white) !important;
+}
+
+/* Add styles for links */
+a {
+  color: var(--default-link) !important;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-white) !important;
+  text-decoration: none;
+}
