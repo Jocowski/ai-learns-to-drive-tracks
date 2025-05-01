@@ -1,0 +1,29 @@
+.image-preview-modal .ant-modal-content {
+  background: transparent;
+  box-shadow: none;
+}
+
+.image-preview-modal .ant-modal-body {
+  padding: 0;
+}
+
+.preview-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.image-preview-modal .ant-modal-close {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview-modal .ant-modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+} 

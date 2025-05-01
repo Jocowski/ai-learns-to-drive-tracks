@@ -133,5 +133,32 @@
         "tags": ["Base Game", "Obstacles"],
         "length": 30,
         "authors": ["ActivationFunction"]
+    },
+    {   
+        "id": "00016",
+        "name": "Spa Circuit",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 28,
+        "authors": ["ActivationFunction"]
+    },
+    {
+        "id": "00017",
+        "name": "24H Mans",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 38,
+        "authors": ["Gaborlink"]
+    },
+    {
+        "id": "00018",
+        "name": "F1 GP Monaco",
+        "description": "",
+        "surface": ["Asphalt"],
+        "tags": [],
+        "length": 42,
+        "authors": ["Gaborlink"]
     }
 ]

@@ -12,13 +12,41 @@
   height: 300px;
   overflow: hidden;
   border-radius: 8px;
-  background: var(--bg-blue-gray);
+  background: var(--bg-track);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .modal-track-image {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.preview-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.preview-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
 }
 
 .modal-info {
