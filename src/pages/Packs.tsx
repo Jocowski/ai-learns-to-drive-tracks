@@ -13,13 +13,12 @@ const Packs: React.FC = () => {
       </div>
       <div className="description">
         <Typography.Text>
-          I'm developing a system to organize tracks into packs, making it easier to find and download 
-          collections of tracks that match your interests.
+          Tracks into packs, making it easier to find and download collections of tracks that match your interests. Some examples are:
         </Typography.Text>
       </div>
       <ul className="pack-examples">
         <li>Complete Collection - All available tracks in one pack</li>
-        <li>Ice Challenge - A collection of slippery ice tracks</li>
+        <li>Ice Tracks - A collection of ice tracks</li>
         <li>Dirt Tracks - A collection of dirt tracks</li>
         <li>GP Tracks - A collection of professional racing tracks</li>
       </ul>
