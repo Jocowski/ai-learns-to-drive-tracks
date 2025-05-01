@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ai-learns-to-drive-tracks/static/css/main.acc62b5d.css",
-    "main.js": "/ai-learns-to-drive-tracks/static/js/main.af7fc296.js",
+    "main.js": "/ai-learns-to-drive-tracks/static/js/main.47c02f49.js",
     "static/media/00008.png": "/ai-learns-to-drive-tracks/static/media/00008.720f59783d0b8d66da6f.png",
     "static/media/00015.png": "/ai-learns-to-drive-tracks/static/media/00015.0acf027ea59415428001.png",
     "static/media/00013.png": "/ai-learns-to-drive-tracks/static/media/00013.28b0d8435ebe1de840b7.png",
@@ -35,10 +35,10 @@
     "static/media/00002.track": "/ai-learns-to-drive-tracks/static/media/00002.a92004f54f1c673fc581.track",
     "static/media/00010.track": "/ai-learns-to-drive-tracks/static/media/00010.9589020fbeee8bc87f8f.track",
     "main.acc62b5d.css.map": "/ai-learns-to-drive-tracks/static/css/main.acc62b5d.css.map",
-    "main.af7fc296.js.map": "/ai-learns-to-drive-tracks/static/js/main.af7fc296.js.map"
+    "main.47c02f49.js.map": "/ai-learns-to-drive-tracks/static/js/main.47c02f49.js.map"
   },
   "entrypoints": [
     "static/css/main.acc62b5d.css",
-    "static/js/main.af7fc296.js"
+    "static/js/main.47c02f49.js"
   ]
 }
