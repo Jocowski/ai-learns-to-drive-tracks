@@ -13,8 +13,8 @@ const Packs: React.FC = () => {
       </div>
       <div className="description">
         <Typography.Text>
-          I'm developing a system to organize tracks into themed packs, making it easier to find and download 
-          collections of tracks that match your interests. Each pack will be carefully curated and categorized.
+          I'm developing a system to organize tracks into packs, making it easier to find and download 
+          collections of tracks that match your interests.
         </Typography.Text>
       </div>
       <ul className="pack-examples">

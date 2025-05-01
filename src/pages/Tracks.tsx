@@ -140,7 +140,6 @@ const Tracks: React.FC = () => {
           <Title level={2}>
             <Space>
               Track Selection
-              <RightOutlined className="header-icon" />
             </Space>
           </Title>
           <Text type="secondary" className="tracks-subtitle">

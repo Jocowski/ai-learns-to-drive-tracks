@@ -14,7 +14,7 @@ const Tutorial: React.FC = () => {
       <div className="description">
         <Typography.Text>
           I'm working on creating comprehensive tutorials to help you get the most out of this application. 
-          These guides will cover everything from basic track creation to advanced customization.
+          These guides will cover everything from basic track creation to importing and sharing your tracks.
         </Typography.Text>
       </div>
       <ul className="feature-list">
