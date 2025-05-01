@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/ai-learns-to-drive-tracks/static/css/main.acc62b5d.css",
-    "main.js": "/ai-learns-to-drive-tracks/static/js/main.4f1de612.js",
+    "main.css": "/ai-learns-to-drive-tracks/static/css/main.c36b87b2.css",
+    "main.js": "/ai-learns-to-drive-tracks/static/js/main.d6756c9f.js",
     "static/media/00008.png": "/ai-learns-to-drive-tracks/static/media/00008.720f59783d0b8d66da6f.png",
     "static/media/00015.png": "/ai-learns-to-drive-tracks/static/media/00015.0acf027ea59415428001.png",
+    "static/media/00018.png": "/ai-learns-to-drive-tracks/static/media/00018.159164c5503e3e505dd8.png",
+    "static/media/00017.png": "/ai-learns-to-drive-tracks/static/media/00017.408141c2eb7c964ab6e2.png",
     "static/media/00013.png": "/ai-learns-to-drive-tracks/static/media/00013.28b0d8435ebe1de840b7.png",
     "static/media/00016.png": "/ai-learns-to-drive-tracks/static/media/00016.9236d3e24f9233ab372a.png",
     "static/media/00014.png": "/ai-learns-to-drive-tracks/static/media/00014.c25b77c82ca55f3303fc.png",
@@ -20,6 +22,8 @@
     "static/media/00002.png": "/ai-learns-to-drive-tracks/static/media/00002.d8c6273ec77b54519a36.png",
     "static/media/00010.png": "/ai-learns-to-drive-tracks/static/media/00010.b5f91c2d23a95f4c26b0.png",
     "index.html": "/ai-learns-to-drive-tracks/index.html",
+    "static/media/00018.track": "/ai-learns-to-drive-tracks/static/media/00018.ddfa6b55212865c7f6e5.track",
+    "static/media/00017.track": "/ai-learns-to-drive-tracks/static/media/00017.1d57af66bfcd6753d7b5.track",
     "static/media/00008.track": "/ai-learns-to-drive-tracks/static/media/00008.e71148361566b1ce83c5.track",
     "static/media/00015.track": "/ai-learns-to-drive-tracks/static/media/00015.2adbc9794edf51c429ca.track",
     "static/media/00016.track": "/ai-learns-to-drive-tracks/static/media/00016.36a841aed1d4ea4e48fb.track",
@@ -36,11 +40,11 @@
     "static/media/00001.track": "/ai-learns-to-drive-tracks/static/media/00001.cc8a2f2192ca36fb3838.track",
     "static/media/00002.track": "/ai-learns-to-drive-tracks/static/media/00002.a92004f54f1c673fc581.track",
     "static/media/00010.track": "/ai-learns-to-drive-tracks/static/media/00010.9589020fbeee8bc87f8f.track",
-    "main.acc62b5d.css.map": "/ai-learns-to-drive-tracks/static/css/main.acc62b5d.css.map",
-    "main.4f1de612.js.map": "/ai-learns-to-drive-tracks/static/js/main.4f1de612.js.map"
+    "main.c36b87b2.css.map": "/ai-learns-to-drive-tracks/static/css/main.c36b87b2.css.map",
+    "main.d6756c9f.js.map": "/ai-learns-to-drive-tracks/static/js/main.d6756c9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.acc62b5d.css",
-    "static/js/main.4f1de612.js"
+    "static/css/main.c36b87b2.css",
+    "static/js/main.d6756c9f.js"
   ]
 }
