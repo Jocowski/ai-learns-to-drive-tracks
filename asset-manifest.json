@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ai-learns-to-drive-tracks/static/css/main.9a743d1e.css",
-    "main.js": "/ai-learns-to-drive-tracks/static/js/main.1060c2bf.js",
+    "main.css": "/ai-learns-to-drive-tracks/static/css/main.73203936.css",
+    "main.js": "/ai-learns-to-drive-tracks/static/js/main.359bf86b.js",
     "static/media/00019.png": "/ai-learns-to-drive-tracks/static/media/00019.61499e15c18d55d879ad.png",
     "static/media/00078.png": "/ai-learns-to-drive-tracks/static/media/00078.af26b4ab3fbfbb62e3c1.png",
     "static/media/00064.png": "/ai-learns-to-drive-tracks/static/media/00064.1fa487bf3cba90b2cc37.png",
@@ -178,11 +178,11 @@
     "static/media/00001.track": "/ai-learns-to-drive-tracks/static/media/00001.cc8a2f2192ca36fb3838.track",
     "static/media/00002.track": "/ai-learns-to-drive-tracks/static/media/00002.a92004f54f1c673fc581.track",
     "static/media/00010.track": "/ai-learns-to-drive-tracks/static/media/00010.9589020fbeee8bc87f8f.track",
-    "main.9a743d1e.css.map": "/ai-learns-to-drive-tracks/static/css/main.9a743d1e.css.map",
-    "main.1060c2bf.js.map": "/ai-learns-to-drive-tracks/static/js/main.1060c2bf.js.map"
+    "main.73203936.css.map": "/ai-learns-to-drive-tracks/static/css/main.73203936.css.map",
+    "main.359bf86b.js.map": "/ai-learns-to-drive-tracks/static/js/main.359bf86b.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a743d1e.css",
-    "static/js/main.1060c2bf.js"
+    "static/css/main.73203936.css",
+    "static/js/main.359bf86b.js"
   ]
 }
