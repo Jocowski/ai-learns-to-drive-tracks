@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo, useCallback } from 'react';
 import { Typography, Row, Col, Space, Divider, Input, Button, Select, Slider, Dropdown, Checkbox, message } from 'antd';
 import { FilterOutlined, DownloadOutlined, CloseOutlined } from '@ant-design/icons';
 import JSZip from 'jszip';
@@ -19,6 +19,23 @@ interface Track {
   authors: string[];
 }
 
+// Custom hook for debounced search
+const useDebounce = (value: string, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
 const Tracks: React.FC = () => {
   const [tracks, setTracks] = useState<Track[]>([]);
   const [selectedTrack, setSelectedTrack] = useState<Track | null>(null);
@@ -32,34 +49,37 @@ const Tracks: React.FC = () => {
     tags: [] as string[],
   });
 
+  // Debounce search query to improve performance
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
   useEffect(() => {
     // Load tracks data
     setTracks(tracksData);
   }, []);
 
-  const handleCardClick = (track: Track) => {
+  const handleCardClick = useCallback((track: Track) => {
     setSelectedTrack(track);
     setIsModalVisible(true);
-  };
+  }, []);
 
-  const handleModalClose = () => {
+  const handleModalClose = useCallback(() => {
     setIsModalVisible(false);
     setSelectedTrack(null);
-  };
+  }, []);
 
-  const handleFiltersChange = (key: keyof typeof filters, value: any) => {
+  const handleFiltersChange = useCallback((key: keyof typeof filters, value: any) => {
     setFilters(prev => ({ ...prev, [key]: value }));
-  };
+  }, []);
 
-  const handleResetFilters = () => {
+  const handleResetFilters = useCallback(() => {
     setFilters({
       surface: [],
       lengthRange: [0, 100],
       tags: [],
     });
-  };
+  }, []);
 
-  const handleTrackSelection = (trackId: string, selected: boolean) => {
+  const handleTrackSelection = useCallback((trackId: string, selected: boolean) => {
     setSelectedTracks(prev => {
       const newSet = new Set(prev);
       if (selected) {
@@ -69,15 +89,15 @@ const Tracks: React.FC = () => {
       }
       return newSet;
     });
-  };
+  }, []);
 
-  const handleSelectAll = (checked: boolean) => {
+  const handleSelectAll = useCallback((checked: boolean, currentFilteredTracks: Track[]) => {
     if (checked) {
-      setSelectedTracks(new Set(filteredTracks.map(track => track.id)));
+      setSelectedTracks(new Set(currentFilteredTracks.map(track => track.id)));
     } else {
       setSelectedTracks(new Set());
     }
-  };
+  }, []);
 
   const handleDownloadSelected = async () => {
     if (selectedTracks.size === 0) {
@@ -139,37 +159,66 @@ const Tracks: React.FC = () => {
     }
   };
 
-  const handleClearSelection = () => {
+  const handleClearSelection = useCallback(() => {
     setSelectedTracks(new Set());
-  };
+  }, []);
 
-  const filteredTracks = tracks.filter(track => {
-    const searchLower = searchQuery.toLowerCase();
-    const matchesSearch = 
-      track.name.toLowerCase().includes(searchLower) ||
-      track.authors.some(author => author.toLowerCase().includes(searchLower));
+  // Memoize expensive calculations
+  const filteredTracks = useMemo(() => {
+    if (!tracks.length) return [];
+    
+    const searchLower = debouncedSearchQuery.toLowerCase();
+    
+    return tracks.filter(track => {
+      // Early return for search if no search query
+      if (searchLower && !track.name.toLowerCase().includes(searchLower) && 
+          !track.authors.some(author => author.toLowerCase().includes(searchLower))) {
+        return false;
+      }
 
-    const matchesSurface = filters.surface.length === 0 || 
-      filters.surface.every(surface => track.surface.includes(surface));
+      // Early return for surface filter
+      if (filters.surface.length > 0 && 
+          !filters.surface.every(surface => track.surface.includes(surface))) {
+        return false;
+      }
 
-    const matchesLength = track.length >= filters.lengthRange[0] && 
-      track.length <= filters.lengthRange[1];
+      // Early return for length filter
+      if (track.length < filters.lengthRange[0] || track.length > filters.lengthRange[1]) {
+        return false;
+      }
 
-    const matchesTags = filters.tags.length === 0 ||
-      filters.tags.every(tag => track.tags.includes(tag));
+      // Early return for tags filter
+      if (filters.tags.length > 0 && 
+          !filters.tags.every(tag => track.tags.includes(tag))) {
+        return false;
+      }
 
-    return matchesSearch && matchesSurface && matchesLength && matchesTags;
-  });
+      return true;
+    });
+  }, [tracks, debouncedSearchQuery, filters]);
 
-  // Get unique values for filters
-  const uniqueSurfaces = Array.from(new Set(tracks.flatMap(track => track.surface)));
-  const uniqueTags = Array.from(new Set(tracks.flatMap(track => track.tags)));
+  // Memoize unique values for filters
+  const uniqueSurfaces = useMemo(() => 
+    Array.from(new Set(tracks.flatMap(track => track.surface))), 
+    [tracks]
+  );
   
-  // Calculate min and max length for the slider
-  const minLength = Math.min(...tracks.map(track => track.length));
-  const maxLength = Math.max(...tracks.map(track => track.length));
+  const uniqueTags = useMemo(() => 
+    Array.from(new Set(tracks.flatMap(track => track.tags))), 
+    [tracks]
+  );
+  
+  // Memoize min and max length calculations
+  const { minLength, maxLength } = useMemo(() => {
+    if (!tracks.length) return { minLength: 0, maxLength: 100 };
+    const lengths = tracks.map(track => track.length);
+    return {
+      minLength: Math.min(...lengths),
+      maxLength: Math.max(...lengths)
+    };
+  }, [tracks]);
 
-  const filterMenu = (
+  const filterMenu = useMemo(() => (
     <div className="filter-menu-content" style={{ width: 300, padding: '16px' }}>
       <Space direction="vertical" style={{ width: '100%' }}>
         <div>
@@ -217,7 +266,7 @@ const Tracks: React.FC = () => {
         </div>
       </Space>
     </div>
-  );
+  ), [filters, uniqueSurfaces, uniqueTags, minLength, maxLength, handleFiltersChange, handleResetFilters]);
 
   return (
     <div className="tracks-container">
@@ -263,7 +312,7 @@ const Tracks: React.FC = () => {
             <Checkbox
               checked={selectedTracks.size === filteredTracks.length && filteredTracks.length > 0}
               indeterminate={selectedTracks.size > 0 && selectedTracks.size < filteredTracks.length}
-              onChange={(e) => handleSelectAll(e.target.checked)}
+              onChange={(e) => handleSelectAll(e.target.checked, filteredTracks)}
             >
               <Text strong>Select All ({selectedTracks.size} selected)</Text>
             </Checkbox>

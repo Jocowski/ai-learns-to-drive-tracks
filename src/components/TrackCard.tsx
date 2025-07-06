@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Card, Space, Typography, Tag, Checkbox } from 'antd';
 import { DownloadOutlined, EyeOutlined } from '@ant-design/icons';
 import ImagePreviewModal from './ImagePreviewModal';
@@ -23,19 +23,23 @@ interface TrackCardProps {
   onSelectionChange: (trackId: string, selected: boolean) => void;
 }
 
-const TrackCard: React.FC<TrackCardProps> = ({ track, onClick, isSelected, onSelectionChange }) => {
+const TrackCard: React.FC<TrackCardProps> = React.memo(({ track, onClick, isSelected, onSelectionChange }) => {
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const imageUrl = require(`../assets/tracks/${track.id}.png`);
 
-  const handlePreviewClick = (e: React.MouseEvent) => {
+  const handlePreviewClick = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPreviewVisible(true);
-  };
+  }, []);
 
-  const handleCheckboxChange = (e: any) => {
+  const handleCheckboxChange = useCallback((e: any) => {
     e.stopPropagation();
     onSelectionChange(track.id, e.target.checked);
-  };
+  }, [track.id, onSelectionChange]);
+
+  const handleModalClose = useCallback(() => {
+    setIsPreviewVisible(false);
+  }, []);
 
   return (
     <>
@@ -105,10 +109,10 @@ const TrackCard: React.FC<TrackCardProps> = ({ track, onClick, isSelected, onSel
       <ImagePreviewModal
         imageUrl={imageUrl}
         isVisible={isPreviewVisible}
-        onClose={() => setIsPreviewVisible(false)}
+        onClose={handleModalClose}
       />
     </>
   );
-};
+});
 
 export default TrackCard; 
