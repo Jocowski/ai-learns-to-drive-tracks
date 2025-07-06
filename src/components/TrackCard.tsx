@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Space, Typography, Tag } from 'antd';
+import { Card, Space, Typography, Tag, Checkbox } from 'antd';
 import { DownloadOutlined, EyeOutlined } from '@ant-design/icons';
 import ImagePreviewModal from './ImagePreviewModal';
 import './TrackCard.css';
@@ -19,15 +19,22 @@ interface Track {
 interface TrackCardProps {
   track: Track;
   onClick: (track: Track) => void;
+  isSelected: boolean;
+  onSelectionChange: (trackId: string, selected: boolean) => void;
 }
 
-const TrackCard: React.FC<TrackCardProps> = ({ track, onClick }) => {
+const TrackCard: React.FC<TrackCardProps> = ({ track, onClick, isSelected, onSelectionChange }) => {
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const imageUrl = require(`../assets/tracks/${track.id}.png`);
 
   const handlePreviewClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPreviewVisible(true);
+  };
+
+  const handleCheckboxChange = (e: any) => {
+    e.stopPropagation();
+    onSelectionChange(track.id, e.target.checked);
   };
 
   return (
@@ -49,6 +56,13 @@ const TrackCard: React.FC<TrackCardProps> = ({ track, onClick }) => {
             >
               <EyeOutlined />
             </button>
+            <div className="checkbox-overlay">
+              <Checkbox
+                checked={isSelected}
+                onChange={handleCheckboxChange}
+                onClick={handleCheckboxChange}
+              />
+            </div>
           </div>
         }
         actions={[

@@ -105,4 +105,27 @@
   word-break: break-word;
   flex: 1;
   min-width: 0;
+}
+
+/* Checkbox overlay styles */
+.checkbox-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+}
+
+.checkbox-overlay .ant-checkbox-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.checkbox-overlay .ant-checkbox {
+  color: white;
+}
+
+.checkbox-overlay .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff;
+  border-color: #1890ff;
 } 

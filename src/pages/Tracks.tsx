@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Typography, Row, Col, Space, Divider, Input, Button, Select, Slider, Dropdown } from 'antd';
-import { FilterOutlined } from '@ant-design/icons';
+import { Typography, Row, Col, Space, Divider, Input, Button, Select, Slider, Dropdown, Checkbox, message } from 'antd';
+import { FilterOutlined, DownloadOutlined, CloseOutlined } from '@ant-design/icons';
+import JSZip from 'jszip';
 import tracksData from '../data/tracks.json';
 import TrackCard from '../components/TrackCard';
 import TrackModal from '../components/TrackModal';
@@ -24,6 +25,7 @@ const Tracks: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isFiltersMenuVisible, setIsFiltersMenuVisible] = useState(false);
+  const [selectedTracks, setSelectedTracks] = useState<Set<string>>(new Set());
   const [filters, setFilters] = useState({
     surface: [] as string[],
     lengthRange: [0, 100] as [number, number],
@@ -55,6 +57,90 @@ const Tracks: React.FC = () => {
       lengthRange: [0, 100],
       tags: [],
     });
+  };
+
+  const handleTrackSelection = (trackId: string, selected: boolean) => {
+    setSelectedTracks(prev => {
+      const newSet = new Set(prev);
+      if (selected) {
+        newSet.add(trackId);
+      } else {
+        newSet.delete(trackId);
+      }
+      return newSet;
+    });
+  };
+
+  const handleSelectAll = (checked: boolean) => {
+    if (checked) {
+      setSelectedTracks(new Set(filteredTracks.map(track => track.id)));
+    } else {
+      setSelectedTracks(new Set());
+    }
+  };
+
+  const handleDownloadSelected = async () => {
+    if (selectedTracks.size === 0) {
+      message.warning('No tracks selected for download');
+      return;
+    }
+
+    try {
+      message.loading({ content: 'Creating zip file...', key: 'download' });
+      
+      const zip = new JSZip();
+      const selectedTrackList = Array.from(selectedTracks);
+      
+      // Add each selected track to the zip
+      for (const trackId of selectedTrackList) {
+        const track = tracks.find(t => t.id === trackId);
+        if (track) {
+          try {
+            // Fetch the track file
+            const response = await fetch(require(`../data/tracks/${trackId}.track`));
+            const trackData = await response.arrayBuffer();
+            
+            // Add to zip with a clean filename
+            const fileName = `${track.name.replace(/[^a-zA-Z0-9\s-]/g, '')}.track`;
+            zip.file(fileName, trackData);
+          } catch (error) {
+            console.error(`Failed to add track ${track.name} to zip:`, error);
+            message.error(`Failed to add ${track.name} to zip file`);
+          }
+        }
+      }
+      
+      // Generate the zip file
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      
+      // Create download link
+      const url = URL.createObjectURL(zipBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `selected-tracks-${new Date().toISOString().split('T')[0]}.zip`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Clean up the URL object
+      URL.revokeObjectURL(url);
+      
+      message.success({ 
+        content: `Successfully downloaded ${selectedTracks.size} track${selectedTracks.size !== 1 ? 's' : ''}`, 
+        key: 'download' 
+      });
+      
+    } catch (error) {
+      console.error('Failed to create zip file:', error);
+      message.error({ 
+        content: 'Failed to create zip file. Please try again.', 
+        key: 'download' 
+      });
+    }
+  };
+
+  const handleClearSelection = () => {
+    setSelectedTracks(new Set());
   };
 
   const filteredTracks = tracks.filter(track => {
@@ -172,10 +258,27 @@ const Tracks: React.FC = () => {
           </Space>
         </div>
 
+        {filteredTracks.length > 0 && (
+          <div className="select-all-container" style={{ marginBottom: 16 }}>
+            <Checkbox
+              checked={selectedTracks.size === filteredTracks.length && filteredTracks.length > 0}
+              indeterminate={selectedTracks.size > 0 && selectedTracks.size < filteredTracks.length}
+              onChange={(e) => handleSelectAll(e.target.checked)}
+            >
+              <Text strong>Select All ({selectedTracks.size} selected)</Text>
+            </Checkbox>
+          </div>
+        )}
+
         <Row gutter={[24, 24]}>
           {filteredTracks.map((track) => (
             <Col xs={24} sm={20} md={12} lg={8} key={track.id}>
-              <TrackCard track={track} onClick={handleCardClick} />
+              <TrackCard 
+                track={track} 
+                onClick={handleCardClick}
+                isSelected={selectedTracks.has(track.id)}
+                onSelectionChange={handleTrackSelection}
+              />
             </Col>
           ))}
         </Row>
@@ -186,6 +289,42 @@ const Tracks: React.FC = () => {
           onClose={handleModalClose}
         />
       </div>
+
+      {/* Download Overlay */}
+      {selectedTracks.size > 0 && (
+        <div className="download-overlay">
+          <div className="download-overlay-content">
+            <div className="download-overlay-info">
+              <Text strong style={{ color: 'white' }}>
+                {selectedTracks.size} track{selectedTracks.size !== 1 ? 's' : ''} selected
+              </Text>
+              <Text type="secondary" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                {Array.from(selectedTracks).map(trackId => {
+                  const track = tracks.find(t => t.id === trackId);
+                  return track?.name;
+                }).join(', ')}
+              </Text>
+            </div>
+            <Space>
+              <Button 
+                type="primary" 
+                icon={<DownloadOutlined />}
+                onClick={handleDownloadSelected}
+                size="large"
+              >
+                Download All
+              </Button>
+              <Button 
+                icon={<CloseOutlined />}
+                onClick={handleClearSelection}
+                size="large"
+              >
+                Clear
+              </Button>
+            </Space>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
